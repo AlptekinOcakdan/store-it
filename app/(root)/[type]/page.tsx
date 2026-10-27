@@ -35,7 +35,7 @@ const Page = async ({ searchParams, params }: SearchParamProps) => {
 
       {files.total > 0 ? (
         <section className="file-list">
-          {files.documents.map((file: Models.Document) => (
+          {files.documents.map((file: Models.DefaultDocument) => (
             <Card key={file.$id} file={file} />
           ))}
         </section>

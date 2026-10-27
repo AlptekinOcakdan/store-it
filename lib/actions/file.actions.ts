@@ -70,7 +70,7 @@ export const uploadFile = async ({
 };
 
 const createQueries = (
-  currentUser: Models.Document,
+  currentUser: Models.DefaultDocument,
   types: string[],
   searchText: string,
   sort: string,

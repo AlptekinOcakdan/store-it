@@ -14,7 +14,7 @@ const Search = () => {
   const [query, setQuery] = useState("");
   const searchParams = useSearchParams();
   const searchQuery = searchParams.get("query") || "";
-  const [results, setResults] = useState<Models.Document[]>([]);
+  const [results, setResults] = useState<Models.DefaultDocument[]>([]);
   const [open, setOpen] = useState(false);
   const router = useRouter();
   const path = usePathname();
@@ -42,7 +42,7 @@ const Search = () => {
     }
   }, [searchQuery]);
 
-  const handleClickItem = (file: Models.Document) => {
+  const handleClickItem = (file: Models.DefaultDocument) => {
     setOpen(false);
     setResults([]);
 

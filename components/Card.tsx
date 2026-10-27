@@ -5,7 +5,7 @@ import { convertFileSize } from "@/lib/utils";
 import FormattedDateTime from "@/components/FormattedDateTime";
 import ActionDropdown from "@/components/ActionDropdown";
 
-const Card = ({ file }: { file: Models.Document }) => {
+const Card = ({ file }: { file: Models.DefaultDocument }) => {
   return (
     <Link href={file.url} target="_blank" className="file-card">
       <div className="flex justify-between">
@@ -13,8 +13,8 @@ const Card = ({ file }: { file: Models.Document }) => {
           type={file.type}
           extension={file.extension}
           url={file.url}
-          className="!size-20"
-          imageClassName="!size-11"
+          className="size-20!"
+          imageClassName="size-11!"
         />
 
         <div className="flex flex-col items-end justify-between">

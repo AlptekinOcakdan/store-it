@@ -4,9 +4,8 @@ const nextConfig: NextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
+  // Next 16 removed the `eslint` option (next build no longer lints)
+  agentRules: false,
   experimental: {
     serverActions: {
       bodySizeLimit: "100MB",
